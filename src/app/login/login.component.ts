@@ -8,7 +8,8 @@ import { routerTransition } from '../router.animations';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
+  username: string;
+  password: string;
   constructor(public router: Router) { }
 
   ngOnInit() {
