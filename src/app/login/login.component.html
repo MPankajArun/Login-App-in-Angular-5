@@ -1,25 +1,46 @@
 <div class="login-page" [@routerTransition]>
-  <div class="row justify-content-md-center">
-      <div class="col-md-4">
-          <img src="assets/images/logo.png" width="150px" class="user-avatar" />
-          <h1>StudyOptimizer Login</h1>
-          <form role="form">
-              <div class="form-content">
-                  <div class="form-group">
-                      <input type="text" [(ngModel)]="username" class="form-control input-underline input-lg"
-                       placeholder="Username" name="username" required>
-                       
-                  </div>
-
-                  <div class="form-group">
-                      <input type="password" [(ngModel)]="password" name="password" class="form-control input-underline input-lg" placeholder="Password" required>
-                        
+    <div id="my-div" class="container">
+        <div class="row">
+            <h2 style="font-family:Verdana" class="col-md-12">Welcome to IQVIA StudyOptimizer</h2>     
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="text-justify">The first web-based software solution that is exclusively designed to optimize clinical enrollments    .</h3>  
+                <br /><br /><br />
+                <form>
+                    <div class="form-content">
+                        <div class="form-group">
+                            <input type="text" [(ngModel)]="username" class="form-control input-underline input-lg"
+                             placeholder="Username" name="username" required>
+                             {{username}}
+                        </div>
+                    
+                        <div class="form-group">
+                            <input type="password" [(ngModel)]="password" name="password" class="form-control input-underline input-lg" placeholder="Password" required>
+                          </div>
                     </div>
-              </div>
-              <a class="btn rounded-btn" [routerLink]="['/layout']" (click)="onLoggedin()"> Sign in </a>
-              &nbsp;
-              <a class="btn rounded-btn" [routerLink]="['/signup']">Sign Up</a>
-          </form>
-      </div>
-  </div>
+                    <a class="btn rounded-btn" [routerLink]="['/layout']" (click)="onLoggedin()"> Sign in </a>
+                    &nbsp;
+                    <a class="btn rounded-btn" [routerLink]="['/signup']">Sign Up</a>
+                </form>  
+            </div>
+            <div class="col-md-6">
+                <ul class="text-justify">
+                    <li style="list-style:none;">IQVIA StudyOptimizer enables you to:</li>
+                    <li>Plan - Collaborate and model different enrollment assumptions on a global basis.</li>
+                    <li>Track - Monitor the progress of trialsagainst plan and visualize projected performance.</li>
+                    <li>Diagonose - Drill down into key performance areas to identify performance issues quickly.</li>
+                    <li>Optimize - Model various course-corrective strategies to get trials back on track.</li>
+                    <li>Analyze - Evaluate historical performance trends across trials, countries and investigators.</li>
+                    <li>Budget - Evaluate trial enrollment and treatment costs projected across trial duration.</li>
+                    <li>Leverage - Install consistent policies and leverages best practices across the organization.</li>
+                    <li>Oversee - Gain immediate visibility into all  the trials in a portfolio from  a single view.</li>
+                </ul>
+                <p>For more details about the product's features and benefits <a href="">click here</a></p>
+    
+    
+    
+            </div>
+        </div>
+     </div>
 </div>

@@ -1,0 +1,32 @@
+body {
+    background-color: #e6f2ff;
+}
+#my-div {
+    margin: auto;
+    position: absolute;
+    width: 75%; /* Set your desired with */
+    height:75%;
+    z-index: 2; /* Make sure its above other items. */
+    top: 50%;
+    left: 32%;
+    margin-top: -15%; /* Changes with height. */
+    margin-left: -18%; /* Your width divided by 2. */
+
+    /* You will not need the below, its only for styling   purposes. */
+    padding: 10px;
+    border: 2px solid grey;
+    background: linear-gradient(to top, #80aaff , #cce6ff);
+    border-radius: 5px;
+    text-align: center;
+}
+.header-div{
+
+    margin-top: 5%;
+    border-bottom: 20px solid #cccdd4;
+    box-sizing: border-box;
+    background-position: 0 0, 0 100% ;
+    background-repeat: no-repeat;
+    background-size: 100% 20px;
+    background-image: linear-gradient(to bottom, #a3a6a7 0%, #cccdd4 100%), linear-gradient(to top, #cccdd4 0%, #a3a6a7 100%);
+
+}

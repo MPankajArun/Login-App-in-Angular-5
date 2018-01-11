@@ -1,4 +1,4 @@
-$topnav-background-color: #222;
+$topnav-background-color: #e6f2ff;
 :host {
     display: block;
 }
@@ -11,7 +11,7 @@ $topnav-background-color: #222;
     overflow: auto;
     background: $topnav-background-color;
     text-align: center;
-    color: #fff;
+    color: black;
     padding: 3em;
     .col-lg-4 {
         padding: 0;
@@ -27,20 +27,20 @@ $topnav-background-color: #222;
         background: 0 0;
         border: none;
         box-shadow: none;
-        border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-        color: #fff;
+        border-bottom: 2px solid black;
+        color: black;
         border-radius: 0;
     }
     .input-underline:focus {
-        border-bottom: 2px solid #fff;
+        border-bottom: 2px solid black;
         box-shadow: none;
     }
     .rounded-btn {
         -webkit-border-radius: 50px;
         border-radius: 50px;
-        color: rgba(255, 255, 255, 0.8);
-        background: $topnav-background-color;
-        border: 2px solid rgba(255, 255, 255, 0.8);
+        color: black;
+        background: rgb(247, 188, 88);
+        border: 2px solid black;
         font-size: 18px;
         line-height: 40px;
         padding: 0 25px;
@@ -49,9 +49,10 @@ $topnav-background-color: #222;
     .rounded-btn:focus,
     .rounded-btn:active,
     .rounded-btn:visited {
-        color: rgba(255, 255, 255, 1);
-        border: 2px solid rgba(255, 255, 255, 1);
+        color: black;
+        border: 2px solid black;
         outline: none;
+        background: rgb(231, 105, 22);
     }
 
     h1 {
@@ -67,29 +68,37 @@ $topnav-background-color: #222;
     .form-group {
         padding: 8px 0;
         input::-webkit-input-placeholder {
-            color: rgba(255, 255, 255, 0.6) !important;
+            color: rgba(7, 7, 7, 0.6) !important;
         }
 
         input:-moz-placeholder {
             /* Firefox 18- */
-            color: rgba(255, 255, 255, 0.6) !important;
+            color: rgba(7, 7, 7, 0.6) !important;
         }
 
         input::-moz-placeholder {
             /* Firefox 19+ */
-            color: rgba(255, 255, 255, 0.6) !important;
+            color: rgba(7, 7, 7, 0.6) !important;
         }
 
         input:-ms-input-placeholder {
-            color: rgba(255, 255, 255, 0.6) !important;
+            color: rgba(7, 7, 7, 0.6)!important;
         }
     }
     .form-content {
         padding: 40px 0;
     }
-    .user-avatar {
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        border: 2px solid #fff;
-    }
+    
+}
+
+#my-div {
+    margin: auto;
+    z-index: 2; /* Make sure its above other items. */
+    margin-top: 3%;
+    /* You will not need the below, its only for styling   purposes. */
+    padding: 10px;
+    border: 2px solid grey;
+    background: linear-gradient(to top, #80aaff , #cce6ff);
+    border-radius: 5px;
+    text-align: center;
 }
