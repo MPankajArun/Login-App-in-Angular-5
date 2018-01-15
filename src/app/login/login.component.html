@@ -5,24 +5,29 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-                <h3 class="text-justify">The first web-based software solution that is exclusively designed to optimize clinical enrollments    .</h3>  
-                <br /><br /><br />
+                <h4 class="text-justify">The first web-based software solution that is exclusively designed to optimize clinical enrollments    .</h4>  
+                <br />
                 <form>
-                    <div class="form-content">
-                        <div class="form-group">
-                            <input type="text" [(ngModel)]="username" class="form-control input-underline input-lg"
-                             placeholder="Username" name="username" required>
-                             {{username}}
+                        <div class="form-content">
+                            <div class="form-group">
+                                <label><strong>Username: </strong></label>
+                                <input type="text" [(ngModel)]="username" kendoTextBox class="k-textbox"
+                                 placeholder="Enter Username ..." name="username" required autofocus>
+                                 
+                            </div>
+                        
+                            <div class="form-group">
+                                <label><strong>Password: </strong> </label>
+                                <input type="password" [(ngModel)]="password" name="password" kendoTextBox class="k-textbox"
+                                placeholder="Enter Password ..." required autofocus>
+                            </div>
                         </div>
-                    
-                        <div class="form-group">
-                            <input type="password" [(ngModel)]="password" name="password" class="form-control input-underline input-lg" placeholder="Password" required>
-                          </div>
-                    </div>
-                    <a class="btn rounded-btn" [routerLink]="['/layout']" (click)="onLoggedin()"> Sign in </a>
-                    &nbsp;
-                    <a class="btn rounded-btn" [routerLink]="['/signup']">Sign Up</a>
+                        <button kendoButton class="k-button primary" [routerLink]="['/layout']" (click)="onLoggedin()" [primary]="true"> Sign in </button>
+                        &nbsp;&nbsp;
+                        <button kendoButton class="k-button primary" [routerLink]="['/signup']" [primary]="true">Sign Up</button>
+                        <br /><a  [routerLink]="['/forget-password']" >Forget password</a>
                 </form>  
+                      
             </div>
             <div class="col-md-6">
                 <ul class="text-justify">

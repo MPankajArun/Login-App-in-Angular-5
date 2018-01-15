@@ -36,5 +36,4 @@ export class LayoutComponent implements OnInit {
             this.t = setTimeout(reload, 5000);  // time is in milliseconds (1000 is 1 second)
         }
     }
-    
 }

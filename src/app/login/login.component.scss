@@ -12,6 +12,7 @@ $topnav-background-color: #e6f2ff;
     background: $topnav-background-color;
     text-align: center;
     color: black;
+    font-size:12px;
     padding: 3em;
     .col-lg-4 {
         padding: 0;
@@ -39,22 +40,12 @@ $topnav-background-color: #e6f2ff;
         -webkit-border-radius: 50px;
         border-radius: 50px;
         color: black;
-        background: rgb(247, 188, 88);
-        border: 2px solid black;
-        font-size: 18px;
-        line-height: 40px;
-        padding: 0 25px;
+        font-size: 14px;
+        line-height: 35px;
+        padding: 0 15px;
+        
     }
-    .rounded-btn:hover,
-    .rounded-btn:focus,
-    .rounded-btn:active,
-    .rounded-btn:visited {
-        color: black;
-        border: 2px solid black;
-        outline: none;
-        background: rgb(231, 105, 22);
-    }
-
+    
     h1 {
         font-weight: 300;
         margin-top: 20px;
@@ -66,7 +57,7 @@ $topnav-background-color: #e6f2ff;
     }
 
     .form-group {
-        padding: 8px 0;
+        padding: 4px 0;
         input::-webkit-input-placeholder {
             color: rgba(7, 7, 7, 0.6) !important;
         }
@@ -84,17 +75,23 @@ $topnav-background-color: #e6f2ff;
         input:-ms-input-placeholder {
             color: rgba(7, 7, 7, 0.6)!important;
         }
+        input:focus{
+            border: 2px solid rgb(122, 186, 247);
+        }
+        input {
+           width:50%;
+        }
     }
-    .form-content {
-        padding: 40px 0;
-    }
+    
     
 }
 
 #my-div {
     margin: auto;
     z-index: 2; /* Make sure its above other items. */
-    margin-top: 3%;
+    margin-top: 5%;
+    width: 65%;
+    height: auto;
     /* You will not need the below, its only for styling   purposes. */
     padding: 10px;
     border: 2px solid grey;
@@ -102,3 +99,21 @@ $topnav-background-color: #e6f2ff;
     border-radius: 5px;
     text-align: center;
 }
+
+.primary {
+    background-color: #64a1d5;
+    background-image: linear-gradient(to bottom, #64a1d5, #428bca);
+    color: #fff;
+    border-color: #f3b75c;
+    min-width: 100px;
+}
+.primary:hover {
+    background-color: #428bca;
+    color: #fff;
+    border-color: #428bca;
+}
+.primary.k-state-disabled, .primary.k-state-disabled:hover {
+    background-color: #8dc5e1;
+    color: #fff;
+}
+
