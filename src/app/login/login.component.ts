@@ -4,6 +4,7 @@ import { routerTransition } from '../router.animations';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,12 +13,25 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
   username: string;
   password: string;
+  isValid: boolean;
   constructor(public router: Router) { }
 
   ngOnInit() {
+    this.isValid = !localStorage.getItem('isLoggedIn');
   }
 
-  onLoggedIn() {
-    localStorage.setItem('isLoggedIn', 'true');
-  }
+  onLoggedIn = function () {
+   if (this.password === this.username) {
+      localStorage.setItem('isLoggedIn', 'true');
+      // console.log(this.username);
+      // console.log(this.password);
+      // this.isValid = true;
+      window.location.href = '/layout';
+    } else {
+      localStorage.setItem('isLoggedIn', 'false');
+      // window.location.href = '/login';
+    }
+    this.isValid = localStorage.getItem('isLoggedIn');
+  };
 }
+

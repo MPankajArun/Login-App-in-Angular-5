@@ -1,31 +1,37 @@
 <div class="login-page" [@routerTransition]>
+    <div class="row" id="div-header">
+        <img  class="col-md-auto header-img" src="..//assets/images/header.JPG" />
+    </div>
     <div id="my-div" class="container">
         <div class="row">
             <h2 style="font-family:Verdana" class="col-md-12">Welcome to IQVIA StudyOptimizer</h2>     
         </div>
         <div class="row">
             <div class="col-md-6">
-                <h4 class="text-justify">The first web-based software solution that is exclusively designed to optimize clinical enrollments    .</h4>  
-                <br />
+                <h5 class="text-justify">&nbsp;&nbsp;The first web-based software solution that is exclusively designed to optimize clinical enrollments.</h5>  
+                <br /><br /><br />
                 <form>
                         <div class="form-content">
                             <div class="form-group">
+                                <div *ngIf="isValid" style="color:red;">Username or Password is invalid.<br /></div>
                                 <label><strong>Username: </strong></label>
                                 <input type="text" [(ngModel)]="username" kendoTextBox class="k-textbox"
-                                 placeholder="Enter Username ..." name="username" required autofocus>
-                                 
+                                 placeholder="Enter Username ..." name="username" 
+                                 title="Please enter a valid email" required autofocus>
+                                
                             </div>
                         
                             <div class="form-group">
                                 <label><strong>Password: </strong> </label>
                                 <input type="password" [(ngModel)]="password" name="password" kendoTextBox class="k-textbox"
-                                placeholder="Enter Password ..." required autofocus>
+                                placeholder="Enter Password ..." 
+                                title="Minimum 8 characters, one number, one uppercase and one lowercase letter"  required autofocus >
                             </div>
                         </div>
-                        <button kendoButton class="k-button primary" [routerLink]="['/layout']" (click)="onLoggedin()" [primary]="true"> Sign in </button>
+                        <button kendoButton class="k-button primary"  (click)="onLoggedIn()" [primary]="true" [disabled]="!(username && password.length >= 8)"> Sign in </button>
                         &nbsp;&nbsp;
                         <button kendoButton class="k-button primary" [routerLink]="['/signup']" [primary]="true">Sign Up</button>
-                        <br /><a  [routerLink]="['/forget-password']" >Forget password</a>
+                        <br /><a *ngIf="isValid" [routerLink]="['/forget-password']"> Forget password</a>
                 </form>  
                       
             </div>
@@ -41,11 +47,15 @@
                     <li>Leverage - Install consistent policies and leverages best practices across the organization.</li>
                     <li>Oversee - Gain immediate visibility into all  the trials in a portfolio from  a single view.</li>
                 </ul>
-                <p>For more details about the product's features and benefits <a href="">click here</a></p>
-    
-    
-    
+                <p>For more details about the product's features and benefits <a target="_blank"href="https://www.iqvia.com/solutions/technologies/clinical-trial-design-and-planning-suite/clinical-trial-optimization-solutions">click here</a></p>
             </div>
         </div>
      </div>
+     <div class="row" id="div-footer">
+            <p class="col-md-12">IQVIA StudyOptimizer 5.8 Build 58000<br />
+                &copy; 2014-2017 IQVIA. All Rights Reserved.<br />
+            U.S. patents granted  and pending.
+            </p>     
+    </div>
 </div>
+

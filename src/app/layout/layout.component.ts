@@ -32,7 +32,7 @@ export class LayoutComponent implements OnInit {
 
        function resetTimer() {
             clearTimeout(this.t);
-            this.t = setTimeout(logout, 3000);  // time is in milliseconds (1000 is 1 second)
+            this.t = setTimeout(logout, 30000);  // time is in milliseconds (1000 is 1 second)
             this.t = setTimeout(reload, 5000);  // time is in milliseconds (1000 is 1 second)
         }
     }
