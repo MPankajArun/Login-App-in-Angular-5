@@ -17,21 +17,19 @@ export class LoginComponent implements OnInit {
   constructor(public router: Router) { }
 
   ngOnInit() {
-    this.isValid = !localStorage.getItem('isLoggedIn');
   }
 
   onLoggedIn = function () {
    if (this.password === this.username) {
       localStorage.setItem('isLoggedIn', 'true');
-      // console.log(this.username);
-      // console.log(this.password);
-      // this.isValid = true;
+      this.isValid = localStorage.getItem('isLoggedIn');
       window.location.href = '/layout';
     } else {
       localStorage.setItem('isLoggedIn', 'false');
+      this.isValid = localStorage.getItem('isLoggedIn');
       // window.location.href = '/login';
     }
-    this.isValid = localStorage.getItem('isLoggedIn');
+    
   };
 }
 
