@@ -1,4 +1,4 @@
-<div class="login-page" [@routerTransition]>
+<div class="login-page">
     <div class="row" id="div-header">
         <img  class="col-md-auto header-img" src="..//assets/images/header.JPG" />
     </div>
@@ -27,15 +27,19 @@
                                 placeholder="Enter Password ..." 
                                 title="Minimum 8 characters, one number, one uppercase and one lowercase letter"  required autofocus >
                             </div>
+
+                            <div class="form-group">
+                                    <button kendoButton class="k-button primary"  (click)="onLoggedIn()" [primary]="true" [disabled]="!(username && password.length >= 8)"> Sign In </button>
+                                    &nbsp;&nbsp;
+                                    <button kendoButton class="k-button primary" [routerLink]="['/signup']" [primary]="true">Sign Up</button>
+                                    <br /><a *ngIf="isValid" [routerLink]="['/forget-password']"> Forget password</a>
+                            </div>
                         </div>
-                        <button kendoButton class="k-button primary"  (click)="onLoggedIn()" [primary]="true" [disabled]="!(username && password.length >= 8)"> Sign in </button>
-                        &nbsp;&nbsp;
-                        <button kendoButton class="k-button primary" [routerLink]="['/signup']" [primary]="true">Sign Up</button>
-                        <br /><a *ngIf="isValid" [routerLink]="['/forget-password']"> Forget password</a>
+                        
                 </form>  
                       
             </div>
-            <div class="col-md-6">
+            <!-- <div class="col-md-6">
                 <ul class="text-justify">
                     <li style="list-style:none;">IQVIA StudyOptimizer enables you to:</li>
                     <li>Plan - Collaborate and model different enrollment assumptions on a global basis.</li>
@@ -48,7 +52,14 @@
                     <li>Oversee - Gain immediate visibility into all  the trials in a portfolio from  a single view.</li>
                 </ul>
                 <p>For more details about the product's features and benefits <a target="_blank"href="https://www.iqvia.com/solutions/technologies/clinical-trial-design-and-planning-suite/clinical-trial-optimization-solutions">click here</a></p>
-            </div>
+            </div> -->
+            <div class="col-md-6">
+                    <ul class="text-justify">
+                        <li style="list-style:none;">IQVIA StudyOptimizer enables you to:</li>
+                        <li *ngFor="let feature of features">{{feature.feature}} - {{feature.description}}</li>
+                    </ul>
+                    <p>For more details about the product's features and benefits <a target="_blank"href="https://www.iqvia.com/solutions/technologies/clinical-trial-design-and-planning-suite/clinical-trial-optimization-solutions">click here</a></p>
+                </div>
         </div>
      </div>
      <div class="row" id="div-footer">

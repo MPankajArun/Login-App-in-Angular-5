@@ -2,21 +2,25 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { routerTransition } from '../router.animations';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FeatureService } from '../feature.service';
 
 
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  // providers: [FeatureService]
 })
 export class LoginComponent implements OnInit {
   username: string;
   password: string;
   isValid: boolean;
-  constructor(public router: Router) { }
+  features: {feature: string, description: string} [] = [];
+  constructor(public router: Router, private featureService: FeatureService) { }
 
   ngOnInit() {
+    this.features = this.featureService.getFeatures();
   }
 
   onLoggedIn = function () {
@@ -29,7 +33,6 @@ export class LoginComponent implements OnInit {
       this.isValid = localStorage.getItem('isLoggedIn');
       // window.location.href = '/login';
     }
-    
   };
 }
 
