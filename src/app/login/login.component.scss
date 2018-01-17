@@ -12,7 +12,7 @@ $topnav-background-color: #e6f2ff;
     background: $topnav-background-color;
     text-align: center;
     color: black;
-    font-size:12px;
+    font-size:11px;
     padding:4px;
     
     h1 {
@@ -58,15 +58,16 @@ $topnav-background-color: #e6f2ff;
 #my-div {
     margin: auto;
     z-index: 2; /* Make sure its above other items. */
-    margin-top: 2%;
-    width: 65%;
+    margin-top: 3%;
+    width: 60%;
     height: auto;
     /* You will not need the below, its only for styling   purposes. */
     padding: 10px;
-    border: 2px solid grey;
-    background: linear-gradient(to top, #80aaff , #cce6ff);
+    border: 2px solid rgb(224, 224, 224);
     border-radius: 5px;
     text-align: center;
+    background: linear-gradient(to top, #688AAB ,#C2D1E2);
+
 }
 
 .primary {
@@ -110,6 +111,6 @@ $topnav-background-color: #e6f2ff;
     padding-left: 0px;
     padding-right:0px;
     padding-top:0%;
-    max-width: 100%;
+    //max-width: 100%;
     
 }

@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   username: string;
   password: string;
   isValid: boolean;
-  features: {feature: string, description: string} [] = [];
+  features: {featureName: string, description: string} [] = [];
   constructor(public router: Router, private featureService: FeatureService) { }
 
   ngOnInit() {

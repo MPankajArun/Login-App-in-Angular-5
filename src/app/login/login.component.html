@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-md-6">
                 <h5 class="text-justify">&nbsp;&nbsp;The first web-based software solution that is exclusively designed to optimize clinical enrollments.</h5>  
-                <br /><br /><br />
+                <br /><br /><br /><br />
                 <form>
                         <div class="form-content">
                             <div class="form-group">
@@ -56,10 +56,10 @@
             <div class="col-md-6">
                     <ul class="text-justify">
                         <li style="list-style:none;">IQVIA StudyOptimizer enables you to:</li>
-                        <li *ngFor="let feature of features">{{feature.feature}} - {{feature.description}}</li>
+                        <li *ngFor="let feature of features"><strong>{{feature.featureName}}</strong> - {{feature.description}}</li>
                     </ul>
                     <p>For more details about the product's features and benefits <a target="_blank"href="https://www.iqvia.com/solutions/technologies/clinical-trial-design-and-planning-suite/clinical-trial-optimization-solutions">click here</a></p>
-                </div>
+            </div>
         </div>
      </div>
      <div class="row" id="div-footer">

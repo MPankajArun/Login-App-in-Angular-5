@@ -2,41 +2,41 @@
 export class FeatureService {
     features = [
         {
-            feature: 'Plan',
+            featureName: 'Plan',
             description: 'Collaborate and model different enrollment assumptions on a global basis.'
         },
         {
-            feature: 'Track',
+            featureName: 'Track',
             description: 'Monitor the progress of trialsagainst plan and visualize projected performance.'
         },
         {
-            feature: 'Diagonose',
+            featureName: 'Diagonose',
             description: 'Drill down into key performance areas to identify performance issues quickly.'
         },
         {
-            feature: 'Optimize',
+            featureName: 'Optimize',
             description: 'Model various course-corrective strategies to get trials back on track.'
         },
         {
-            feature: 'Analyze',
+            featureName: 'Analyze',
             description: 'Evaluate historical performance trends across trials, countries and investigators.'
         },
         {
-            feature: 'Budget',
+            featureName: 'Budget',
             description: 'Evaluate trial enrollment and treatment costs projected across trial duration.'
         },
         {
-            feature: 'Leverage',
+            featureName: 'Leverage',
             description: 'Install consistent policies and leverages best practices across the organization.'
         },
         {
-            feature: 'Oversee',
+            featureName: 'Oversee',
             description: 'Gain immediate visibility into all  the trials in a portfolio from  a single view.'
         }
     ];
 
     addFeature(feature: string, description: string) {
-        this.features.push({feature: feature, description: description});
+        this.features.push({featureName: feature, description: description});
     }
 
     getFeatures() {
